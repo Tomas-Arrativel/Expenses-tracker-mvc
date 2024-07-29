@@ -27,7 +27,7 @@ const ExpenseList = ({ expenses, setExpenses, setId }) => {
 				overflow: "auto",
 			}}
 		>
-			{typeof expenses !== "string" ? (
+			{expenses.length >= 1 ? (
 				expenses.map(({ expense_id, title, price }) => (
 					<ListItem key={expense_id}>
 						<ListItemButton
